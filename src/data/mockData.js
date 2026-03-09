@@ -8,7 +8,7 @@ import api from "../api/api";
  */
 export async function generatePlan(projectDescription, role) {
   try {
-    const response = await api.post("/plan", { projectDescription, role });
+    const response = await api.post("/api/plan", { projectDescription, role });
     return response.data;
   } catch (error) {
     console.error("Plan generation failed:", error);
